@@ -8,10 +8,10 @@ const nextConfig: NextConfig = {
     unoptimized: true, 
   },
   // Only apply basePath and assetPrefix in production for GitHub Pages
-  ...(isProduction && {
-    basePath: '/felipestawinski.github.io',
-    assetPrefix: '/felipestawinski.github.io/',
-  }),
+  // ...(isProduction && {
+  //   basePath: '/felipestawinski.github.io',
+  //   assetPrefix: '/felipestawinski.github.io/',
+  // }),
 };
 
 export default nextConfig;
