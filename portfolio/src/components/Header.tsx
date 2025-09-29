@@ -14,11 +14,11 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+    <header className="fixed top-0 left-0 w-full bg-white/10 backdrop-blur-sm shadow-sm z-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="text-2xl font-bold text-gray-900">
-            Felipe Stawinski
+          <div className="text-2xl font-bold text-violet-700">
+            Felipe Stawinski Suzuki
           </div>
 
           {/* Desktop Navigation */}
@@ -27,7 +27,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                className="text-violet-800 hover:text-violet-700 transition-colors duration-200"
               >
                 {item.name}
               </a>
