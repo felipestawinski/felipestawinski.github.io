@@ -4,7 +4,7 @@ const About = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4 transition-colors duration-300">About Me</h2>
-          <div className="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto transition-colors duration-300"></div>
+          <div className="w-20 h-1 bg-violet-600 dark:bg-violet-600 mx-auto transition-colors duration-300"></div>
         </div>
 
         <div className="grid gap-12 items-center">
