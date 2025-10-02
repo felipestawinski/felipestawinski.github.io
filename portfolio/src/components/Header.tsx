@@ -14,10 +14,10 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-white/10 backdrop-blur-sm shadow-sm z-50">
+    <header className="fixed top-0 left-0 w-full bg-white/10 dark:bg-gray-900/10 backdrop-blur-sm shadow-sm z-50 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="text-2xl font-bold text-violet-700">
+          <div className="text-2xl font-bold text-violet-700 dark:text-violet-400 transition-colors duration-300">
             Felipe Stawinski Suzuki
           </div>
 
@@ -27,7 +27,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-violet-500 hover:text-violet-700 transition-colors duration-200"
+                className="text-violet-500 dark:text-violet-400 hover:text-violet-700 dark:hover:text-violet-300 transition-colors duration-200"
               >
                 {item.name}
               </a>
@@ -40,9 +40,9 @@ const Header = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <div className="w-6 h-6 flex flex-col justify-center items-center">
-              <span className={`bg-gray-800 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isMenuOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
-              <span className={`bg-gray-800 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-              <span className={`bg-gray-800 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isMenuOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}></span>
+              <span className={`bg-gray-800 dark:bg-gray-200 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isMenuOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
+              <span className={`bg-gray-800 dark:bg-gray-200 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+              <span className={`bg-gray-800 dark:bg-gray-200 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isMenuOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}></span>
             </div>
           </button>
         </div>
@@ -54,7 +54,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="block py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}

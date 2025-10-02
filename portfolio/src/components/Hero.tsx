@@ -3,13 +3,13 @@ import RippleGrid from '../app/RippleGrid';
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-white dark:bg-gray-900 transition-colors duration-300">
       {/* RippleGrid Background */}
       <div className="absolute inset-0 z-0">
         <RippleGrid
           enableRainbow={false}
           gridColor="#4427b9"
-          rippleIntensity={0.10}
+          rippleIntensity={0.05}
           gridSize={20}
           gridThickness={15}
           mouseInteraction={true}
@@ -20,10 +20,10 @@ const Hero = () => {
       
       {/* Content Overlay */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-5xl md:text-7xl font-bold text-violet-800 mb-6">
+        <h1 className="text-5xl md:text-7xl font-bold text-violet-800 dark:text-violet-400 mb-6 transition-colors duration-300">
           Hi, I'm Felipe
         </h1>
-        <div className="text-2xl md:text-3xl text-gray-700 mb-8 h-16 flex items-center justify-center">
+        <div className="text-2xl md:text-3xl text-gray-900 dark:text-gray-300 mb-8 h-16 flex items-center justify-center transition-colors duration-300">
           <TextType
             text={[
               "Full Stack Developer",
@@ -38,20 +38,20 @@ const Hero = () => {
             className="font-medium"
           />
         </div>
-        <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
+        <p className="text-xl text-gray-800 dark:text-gray-400 mb-12 max-w-2xl mx-auto transition-colors duration-300">
           Passionate about creating innovative solutions and building amazing user experiences
           with modern technologies.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#projects"
-            className="bg-violet-800 text-white px-8 py-3 rounded-lg hover:bg-violet-900 transition-colors duration-200 font-medium"
+            className="bg-violet-800 dark:bg-violet-600 text-white px-8 py-3 rounded-lg hover:bg-violet-900 dark:hover:bg-violet-700 transition-colors duration-200 font-medium"
           >
             View My Work
           </a>
           <a
             href="#contact"
-            className="border-2 border-violet-600 text-violet-600 px-8 py-3 rounded-lg hover:bg-violet-600 hover:text-white transition-colors duration-200 font-medium"
+            className="border-2 border-violet-600 dark:border-violet-400 text-violet-600 dark:text-violet-400 px-8 py-3 rounded-lg hover:bg-violet-600 dark:hover:bg-violet-400 hover:text-white dark:hover:text-gray-900 transition-colors duration-200 font-medium"
           >
             Get In Touch
           </a>
