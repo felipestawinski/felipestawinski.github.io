@@ -15,6 +15,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Felipe Stawinski Suzuki",
   description: "Personal portfolio of Felipe Stawinski Suzuki",
+  icons: [
+    {
+      url: '/favicon.ico',
+    },
+  ],   
+            
 };
 
 export default function RootLayout({
