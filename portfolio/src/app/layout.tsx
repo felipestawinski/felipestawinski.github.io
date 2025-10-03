@@ -22,7 +22,6 @@ export const metadata: Metadata = {
       url: '/favicon.ico',
     },
   ],   
-            
 };
 
 export default function RootLayout({
@@ -31,9 +30,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
       >
         <ThemeProvider>
           <DarkModeButton />

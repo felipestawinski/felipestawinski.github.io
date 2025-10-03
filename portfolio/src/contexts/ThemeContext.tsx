@@ -22,18 +22,40 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
-  const [isDark, setIsDark] = useState(true); // Default to dark mode
+  // Start with dark theme to match the static classes in layout
+  const [isDark, setIsDark] = useState(true);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Apply theme to document
+    setMounted(true);
+    
+    // Check for saved theme preference on mount
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      const isDarkSaved = savedTheme === 'dark';
+      setIsDark(isDarkSaved);
+      
+      // Update DOM immediately
+      if (isDarkSaved) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+    
+    // Save theme preference and update DOM
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    
     if (isDark) {
       document.documentElement.classList.add('dark');
-      document.body.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');
-      document.body.classList.remove('dark');
     }
-  }, [isDark]);
+  }, [isDark, mounted]);
 
   const toggleTheme = () => {
     setIsDark(!isDark);
