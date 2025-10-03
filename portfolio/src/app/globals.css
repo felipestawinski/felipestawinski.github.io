@@ -7,13 +7,34 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Custom text selection color */
+::selection {
+  background-color: #8b5cf6; /* Purple background */
+  color: white; /* White text for contrast */
+}
+
+::-moz-selection {
+  background-color: #8b5cf6; /* Purple background for Firefox */
+  color: white; /* White text for contrast */
+}
+
+/* Dark mode text selection */
+.dark ::selection {
+  background-color: #a855f7; /* Lighter purple for dark mode */
+  color: white;
+}
+
+.dark ::-moz-selection {
+  background-color: #a855f7; /* Lighter purple for Firefox in dark mode */
+  color: white;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
-
 
 body {
   background: var(--background);

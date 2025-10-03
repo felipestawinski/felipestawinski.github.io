@@ -18,7 +18,7 @@ const Header = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="text-2xl font-bold text-violet-700 dark:text-violet-400 transition-colors duration-300">
-            Felipe Stawinski Suzuki
+            &lt;fss/&gt;
           </div>
 
           {/* Desktop Navigation */}
