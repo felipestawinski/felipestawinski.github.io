@@ -8,6 +8,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* Custom text selection color */
+
 ::selection {
   background-color: #8b5cf6; /* Purple background */
   color: white; /* White text for contrast */
