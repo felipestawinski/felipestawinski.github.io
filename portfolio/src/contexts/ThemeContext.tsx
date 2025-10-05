@@ -25,7 +25,6 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   // Start with dark theme to match the static classes in layout
   const [isDark, setIsDark] = useState(true);
 
- 
 
   useEffect(() => {
     

@@ -52,7 +52,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-medium text-gray-900 dark:text-gray-100 transition-colors duration-300">LinkedIn</p>
-                  <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">linkedin.com/in/felipestawinski</p>
+                  <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">linkedin.com/in/felipe-stawinski-suzuki-654002238</p>
                 </div>
               </div>
               <div className="flex items-center">
