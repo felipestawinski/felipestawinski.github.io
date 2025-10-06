@@ -3,12 +3,12 @@ import RippleGrid from '../app/RippleGrid';
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gray-200 dark:bg-gray-900 transition-colors duration-300">
+    <section id="home" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-gray-200 dark:bg-gray-900 transition-colors duration-300">
       {/* RippleGrid Background */}
       <div className="absolute inset-0 z-0">
         <RippleGrid
           enableRainbow={false}
-          gridColor="#3b3b3b"
+          gridColor="#8d42f5"
           rippleIntensity={0.05}
           gridSize={20}
           gridThickness={15}
@@ -19,8 +19,8 @@ const Hero = () => {
       </div>
       
       {/* Content Overlay */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-5xl md:text-7xl font-bold text-violet-800 dark:text-violet-400 mb-6 transition-colors duration-300">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex-1 flex flex-col justify-center">
+        <h1 className="text-5xl md:text-7xl font-bold text-violet-800 dark:text-violet-500 mb-6 transition-colors duration-300">
           Hi, I'm Felipe :)
         </h1>
         <div className="text-2xl md:text-3xl text-gray-900 dark:text-gray-300 mb-8 h-16 flex items-center justify-center transition-colors duration-300">
@@ -88,6 +88,20 @@ const Hero = () => {
               Resume
             </span>
           </a>
+        </div>
+      </div>
+
+      {/* Bottom Image - Manually translated 10px down */}
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-10.5 z-10">
+        <div className="relative inline-block">
+          {/* Background circle/shape behind the image */}
+          <div className="absolute inset-0 bg-white/20 dark:bg-gray-800/30 rounded-full blur-xl scale-110 -z-10"></div>
+          
+          <img 
+            src="/image.png" 
+            alt="Portfolio illustration" 
+            className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-contain transition-all duration-300 hover:scale-105"
+          />
         </div>
       </div>
     </section>
