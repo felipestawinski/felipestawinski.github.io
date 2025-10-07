@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <RippleGrid
           enableRainbow={false}
-          gridColor="#8d42f5"
+          gridColor="#8E51FF"
           rippleIntensity={0.05}
           gridSize={20}
           gridThickness={15}
@@ -98,7 +98,7 @@ const Hero = () => {
           <div className="absolute inset-0 bg-white/20 dark:bg-gray-800/30 rounded-full blur-xl scale-110 -z-10"></div>
           
           <img 
-            src="/image.png" 
+            src="/my-image.png" 
             alt="Portfolio illustration" 
             className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-contain transition-all duration-300 hover:scale-105"
           />
