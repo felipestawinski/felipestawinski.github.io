@@ -1,3 +1,4 @@
+'use client'
 import TextType from '../app/TextType';
 import RippleGrid from '../app/RippleGrid';
 
@@ -20,10 +21,10 @@ const Hero = () => {
       
       {/* Content Overlay */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex-1 flex flex-col justify-center">
-        <h1 className="text-5xl md:text-7xl font-bold text-violet-800 dark:text-violet-500 mb-6 transition-colors duration-300">
+        <h1 className="text-5xl md:text-7xl font-bold text-violet-800 dark:text-violet-500 mb-6 transition-colors duration-300 animate-[fadeInUp_0.8s_ease-out_0.2s_both]">
           Hi, I'm Felipe :)
         </h1>
-        <div className="text-2xl md:text-3xl text-gray-900 dark:text-gray-300 mb-8 h-16 flex items-center justify-center transition-colors duration-300">
+        <div className="text-2xl md:text-3xl text-gray-900 dark:text-gray-300 mb-8 h-16 flex items-center justify-center transition-colors duration-300 animate-[fadeInUp_0.8s_ease-out_0.4s_both]">
           <TextType
             text={[
               "Full Stack Developer",
@@ -37,13 +38,13 @@ const Hero = () => {
             className="font-medium"
           />
         </div>
-        <p className="text-xl text-gray-800 dark:text-gray-400 mb-12 max-w-2xl mx-auto transition-colors duration-300">
+        <p className="text-xl text-gray-800 dark:text-gray-400 mb-12 max-w-2xl mx-auto transition-colors duration-300 animate-[fadeInUp_0.8s_ease-out_0.6s_both]">
           Passionate about creating innovative solutions and building amazing user experiences
           with modern technologies. When I'm not coding, I enjoy playing guitar/bass and hiking.
         </p>
         
         {/* Social Links */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-[fadeInUp_0.8s_ease-out_0.8s_both]">
           {/* GitHub */}
           <a
             href="https://github.com/felipestawinski"
@@ -91,11 +92,9 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Bottom Image - Manually translated 10px down */}
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-10.5 z-10">
+      {/* Bottom Image - Animated to emerge from below */}
+      <div className="absolute bottom-10 transform  z-10 animate-[slideUpFromBelow_1.2s_ease-out_1s_both]">
         <div className="relative inline-block">
-          {/* Background circle/shape behind the image */}
-          <div className="absolute inset-0 bg-white/20 dark:bg-gray-800/30 rounded-full blur-xl scale-110 -z-10"></div>
           
           <img 
             src="/my-image.png" 
@@ -104,6 +103,30 @@ const Hero = () => {
           />
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes slideUpFromBelow {
+          from {
+            
+            transform: translateY(300px);
+          }
+          to {
+            
+            transform:  translateY(80px);
+          }
+        }
+      `}</style>
     </section>
   );
 };
