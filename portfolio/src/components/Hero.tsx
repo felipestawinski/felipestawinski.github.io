@@ -29,7 +29,7 @@ const Hero = () => {
             text={[
               "Full Stack Developer",
               "Curitiba, Brazil",
-              "Systems Information, UTFPR (8/8)"
+              "Information Systems, UTFPR (8/8)"
             ]}
             typingSpeed={75}
             pauseDuration={1500}
