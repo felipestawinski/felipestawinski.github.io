@@ -40,7 +40,7 @@ const Hero = () => {
         </div>
         <p className="text-xl text-gray-800 dark:text-gray-400 mb-12 max-w-2xl mx-auto transition-colors duration-300 animate-[fadeInUp_0.8s_ease-out_0.6s_both]">
           Passionate about creating innovative solutions and building amazing user experiences
-          with modern technologies. When I'm not coding, I enjoy playing guitar/bass and hiking.
+          with modern technologies. When I'm not coding, you can find me playing guitar/bass or watcing a movie!
         </p>
         
         {/* Social Links */}
